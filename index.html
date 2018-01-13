@@ -238,25 +238,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##一、安装python3</p>
-<p></p><h3>1、下载并安装python3</h3><br>官网下载：<a href="https://www.python.org/downloads/windows/" target="_blank" rel="noopener">https://www.python.org/downloads/windows/</a><br><br><br>增加环境变量（若无），进入python安装目录并将python.exe修改为python3.exe<p></p>
-<p>###2、安装pip3<br>下载脚本：<a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a><br><br><br>运行脚本：<b>python3 get-pip.py</b></p>
-<p></p><h3>二、安装tensorflow（GPU）</h3><br>使用pip命令执行：<br><br><br><b>pip install –ignore-installed –upgrade tensorflow-gpu </b><p></p>
-<p></p><h2>三、安装CUDA</h2><br>首先要检查电脑的显卡型号是否支持GPU加速。<br><br><br>点击查看是否支持自己的gpu：<a href="https://developer.nvidia.com/cuda-gpus" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-gpus</a><br><br><p></p>
-<p><img src="https://raw.githubusercontent.com/Acheron2012/Acheron2012.github.io/master/img/2018-01-12-windows-tensorflow-gpu/clipboard.png" style="zoom:50%"></p>
-<p>确定电脑显卡支持GPU加速后，选择对应版本并开始下载Cuda:<br> <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a><br>下载后推荐使用默认安装，安装路径一般为<br><u>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0</u><br><br><br><img src="https://raw.githubusercontent.com/Acheron2012/Acheron2012.github.io/master/img/2018-01-12-windows-tensorflow-gpu/clipboard4.png" style="zoom:100%"></p>
-<p>安装完后会默认配置环境变量，且为了后续依赖包不报错，还需要在path中添加：<br><u>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin</u>              及<br><u>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64</u><br>两个环境变量。</p>
-<p></p><h2>四、安装Cudnn</h2><br>选择对应版本下载cudnn：<a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download</a><br><br><br>下载后面附有cuda版本号，需和上面相一致（红色方框部分是cudnn7，可能会报错，推荐它下面的一个安装V6.0）<br><br><p></p>
-<p><font color="red">Cudnn解压后将bin,include,lib三个文件夹里面的内容原封不对覆盖至Cuda安装目录下即可，</font>默认主路径如上一步。</p>
-<p></p><h2>五、运行测试</h2><br>运行如下代码<br><br><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf  </span><br><span class="line">    sess = tf.Session()  </span><br><span class="line">    x = tf.constant(<span class="number">5</span>)  </span><br><span class="line">    y = tf.constant(<span class="number">35</span>)  </span><br><span class="line">    print(sess.run(x * y))  </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure><p></p>
-<p><b>结果：175</b><br><br><br><br><br><img src="https://raw.githubusercontent.com/Acheron2012/Acheron2012.github.io/master/img/2018-01-12-windows-tensorflow-gpu/clipboard3.png"><br><br><br><i>（若报”pywrap_tensorflow_internal”错误，一般为版本不对，需要进入cuda主目录，将cudnn64_7修改为如上图所示的cudnn64_6)</i></p>
-<p></p><h2>六、注：可能错误</h2><p></p>
-<ul>
-<li><b>Cannot remove entries from nonexistent file</b><br><br>如果在安装 TensorFlow 的时候出现类似Cannot remove entries from nonexistent file c:\users\li\anaconda3\lib\site-packages\easy-install.pth 的错误，那么可以参考 Cannot remove entries from nonexistent #622 和 osx 10.11 installation issues #135，里面说了好多种解决办法，我在这里介绍一种方法：<br>在 <u>pip3 install –upgrade tensorflow-gpu</u> 之前先执行 <u>pip install –upgrade –ignore-installed setuptools</u> 。 </li>
-<li><b>ImportError: DLL load failed: 找不到指定的模块。 和ImportError: No module named ‘_pywrap_tensorflow_internal’ </b><br><br>如果在 import tensorflow 的时候这两个问题同时出现，那么很有可能是你的 cuda 和 cudnn 版本有问题，例如你的 cuda 版本是8.0.60，而正确的是 8.0.44，重新安装正确的版本（文章里提供的）就可以。参考 On Windows, running “import tensorflow” generates No module named “_pywrap_tensorflow” error 。</li>
-</ul>
-<p></p><h2>参考文献</h2><br><a href="https://www.tensorflow.org/install/install_windows" target="_blank" rel="noopener">https://www.tensorflow.org/install/install_windows</a><br><br><br><a href="http://blog.csdn.net/u010099080/article/details/52333935" target="_blank" rel="noopener">http://blog.csdn.net/u010099080/article/details/52333935</a><br><br><br><a href="http://blog.csdn.net/u010099080/article/details/53418159" target="_blank" rel="noopener">http://blog.csdn.net/u010099080/article/details/53418159</a><br><br><br><a href="http://blog.csdn.net/flying_sfeng/article/details/58057400" target="_blank" rel="noopener">http://blog.csdn.net/flying_sfeng/article/details/58057400</a><p></p>
-
+        <h2 id="一、安装python3"><a href="#一、安装python3" class="headerlink" title="一、安装python3"></a>一、安装python3</h2><h3 id="1、下载并安装python3"><a href="#1、下载并安装python3" class="headerlink" title="1、下载并安装python3"></a>1、下载并安装python3</h3><p>官网下载：<a href="https://www.python.org/downloads/windows/" target="_blank" rel="noopener">https://www.python.org/downloads/windows/</a><br>增加环境变量（若无），进入python安装目录并将python.exe修改为python3.exe</p>
+<h3 id="2、安装pip3"><a href="#2、安装pip3" class="headerlink" title="2、安装pip3"></a>2、安装pip3</h3><p>下载脚本：<a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a><br>运行脚本：<b>python3 get-pip.py</b><br>
+        
+          <a class="article-more-a" href="/2018/01/12/2018-01-12-windows上-tensorflow(gpu)/#more">more >></a>
+        
       
 
       
@@ -348,15 +334,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p>
-<ol>
-<li>全是静态文件，访问速度快；</li>
-<li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li>
-<li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li>
-</ol>
-        
-          <a class="article-more-a" href="/2013/12/02/my-first-blog/#more">more >></a>
-        
+        <h2 id="一、安装python3"><a href="#一、安装python3" class="headerlink" title="一、安装python3"></a>一、安装python3</h2><h3 id="1、下载并安装python3"><a href="#1、下载并安装python3" class="headerlink" title="1、下载并安装python3"></a>1、下载并安装python3</h3><p>官网下载：<a href="https://www.python.org/downloads/windows/" target="_blank" rel="noopener">https://www.python.org/downloads/windows/</a></p>
+<p>增加环境变量（若无），进入python安装目录并将python.exe修改为python3.exe</p>
+<h3 id="2、安装pip3"><a href="#2、安装pip3" class="headerlink" title="2、安装pip3"></a>2、安装pip3</h3><p>下载脚本：<a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a></p>
+
       
 
       
