@@ -6,26 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>windows上安装tensorflow(gpu) | Hexo</title>
+  <title>windows上安装tensorflow(gpu) | 若上桑的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="一、安装python31、下载并安装python3官网下载：https://www.python.org/downloads/windows/增加环境变量（若无），进入python安装目录并将python.exe修改为python3.exe 2、安装pip3下载脚本：https://bootstrap.pypa.io/get-pip.py运行脚本：python3 get-pip.py">
 <meta name="keywords" content="windows,tensorflow,gpu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="windows上安装tensorflow(gpu)">
 <meta property="og:url" content="http://yoursite.com/2018/01/12/2018-01-12-windows上-tensorflow-gpu/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="若上桑的博客">
 <meta property="og:description" content="一、安装python31、下载并安装python3官网下载：https://www.python.org/downloads/windows/增加环境变量（若无），进入python安装目录并将python.exe修改为python3.exe 2、安装pip3下载脚本：https://bootstrap.pypa.io/get-pip.py运行脚本：python3 get-pip.py">
 <meta property="og:image" content="http://yoursite.com/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard1.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard2.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard3.png">
 <meta property="og:image" content="http://yoursite.com/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard4.png">
-<meta property="og:updated_time" content="2018-01-13T14:21:09.442Z">
+<meta property="og:updated_time" content="2018-01-13T14:22:10.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="windows上安装tensorflow(gpu)">
 <meta name="twitter:description" content="一、安装python31、下载并安装python3官网下载：https://www.python.org/downloads/windows/增加环境变量（若无），进入python安装目录并将python.exe修改为python3.exe 2、安装pip3下载脚本：https://bootstrap.pypa.io/get-pip.py运行脚本：python3 get-pip.py">
 <meta name="twitter:image" content="http://yoursite.com/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard1.png">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="若上桑的博客" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -52,10 +52,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="https://raw.githubusercontent.com/youngzhaojia/youngzhaojia.github.io/master/photo/avatar/young.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">若上桑</a></h1>
 		</hgroup>
 		
 
@@ -113,7 +113,7 @@
 				<img src="" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">若上桑</h1>
 			</hgroup>
 			
 			
@@ -183,7 +183,7 @@
 <h3 id="2、安装pip3"><a href="#2、安装pip3" class="headerlink" title="2、安装pip3"></a>2、安装pip3</h3><p>下载脚本：<a href="https://bootstrap.pypa.io/get-pip.py" target="_blank" rel="noopener">https://bootstrap.pypa.io/get-pip.py</a><br>运行脚本：<b>python3 get-pip.py</b><br><a id="more"></a></p>
 <h2 id="二、安装tensorflow（GPU）"><a href="#二、安装tensorflow（GPU）" class="headerlink" title="二、安装tensorflow（GPU）"></a>二、安装tensorflow（GPU）</h2><p>使用pip命令执行：<br><b>pip install –ignore-installed –upgrade tensorflow-gpu </b></p>
 <h2 id="三、安装CUDA"><a href="#三、安装CUDA" class="headerlink" title="三、安装CUDA"></a>三、安装CUDA</h2><p>首先要检查电脑的显卡型号是否支持GPU加速。<br>点击查看是否支持自己的gpu：<a href="https://developer.nvidia.com/cuda-gpus" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-gpus</a><br><img src="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard1.png" width="40%" height="40%"><br>确定电脑显卡支持GPU加速后，选择对应版本并开始下载Cuda:<br> <a href="https://developer.nvidia.com/cuda-downloads" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-downloads</a><br>下载后推荐使用默认安装，安装路径一般为<br><u>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0</u><br><img src="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard2.png" alt="logo2"><br>安装完后会默认配置环境变量，且为了后续依赖包不报错，还需要在path中添加：<br><u>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin</u>              及<br><u>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64</u><br>两个环境变量。</p>
-<h3 id="四、安装Cudnn"><a href="#四、安装Cudnn" class="headerlink" title="四、安装Cudnn"></a>四、安装Cudnn</h3><p>选择对应版本下载cudnn：<a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download</a><br><img src="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard3.png" width="50%" height="50%"><br>下载后面附有cuda版本号，需和上面相一致（红色方框部分是cudnn7，可能会报错，推荐它下面的一个安装V6.0）</p>
+<h2 id="四、安装Cudnn"><a href="#四、安装Cudnn" class="headerlink" title="四、安装Cudnn"></a>四、安装Cudnn</h2><p>选择对应版本下载cudnn：<a href="https://developer.nvidia.com/rdp/cudnn-download" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-download</a><br><img src="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard3.png" width="50%" height="50%"><br>下载后面附有cuda版本号，需和上面相一致（红色方框部分是cudnn7，可能会报错，推荐它下面的一个安装V6.0）</p>
 <p><font color="red">Cudnn解压后将bin,include,lib三个文件夹里面的内容原封不对覆盖至Cuda安装目录下即可，</font>默认主路径如上一步。</p>
 <h2 id="五、运行测试"><a href="#五、运行测试" class="headerlink" title="五、运行测试"></a>五、运行测试</h2><p>运行如下代码<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tensorflow <span class="keyword">as</span> tf  </span><br><span class="line">    sess = tf.Session()  </span><br><span class="line">    x = tf.constant(<span class="number">5</span>)  </span><br><span class="line">    y = tf.constant(<span class="number">35</span>)  </span><br><span class="line">    print(sess.run(x * y))  </span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
 <p><b>结果：175</b><br><img src="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/clipboard4.png" alt="logo4"><br><i>（若报”pywrap_tensorflow_internal”错误，一般为版本不对，需要进入cuda主目录，将cudnn64_7修改为如上图所示的cudnn64_6)</i></p>
@@ -369,7 +369,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2018 John Doe
+    		&copy; 2018 若上桑
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
