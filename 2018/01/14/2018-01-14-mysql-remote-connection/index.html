@@ -6,23 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>使用sublime编写latex(texlive) | 若上桑的博客</title>
+  <title>Mysql设置允许外网访问（远程连接） | 若上桑的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、下载地址 TeXLive下载地址：http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/Images/texlive.iso Sublime下载地址：http://sw.bos.baidu.com/sw-search-sp/software/6613504ddd3db/Sublime_Text_3.3126_Setup.exe">
-<meta name="keywords" content="texlive,sublime,latex">
+  <meta name="description" content="主要流程1、打开mysql.exe(MySQL Command Line Client)，输入密码（windows就进入my.ini修改，然后用任务管理器重启服务） 2、输入：use mysql; 3、查询host输入： select user,host from user;">
+<meta name="keywords" content="mysql,外网访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用sublime编写latex(texlive)">
-<meta property="og:url" content="http://yoursite.com/2018/01/14/2018-01-14-texlive-Sublime-Text-3/index.html">
+<meta property="og:title" content="Mysql设置允许外网访问（远程连接）">
+<meta property="og:url" content="http://yoursite.com/2018/01/14/2018-01-14-mysql-remote-connection/index.html">
 <meta property="og:site_name" content="若上桑的博客">
-<meta property="og:description" content="一、下载地址 TeXLive下载地址：http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/Images/texlive.iso Sublime下载地址：http://sw.bos.baidu.com/sw-search-sp/software/6613504ddd3db/Sublime_Text_3.3126_Setup.exe">
-<meta property="og:image" content="http://yoursite.com/2018/01/14/2018-01-14-texlive-Sublime-Text-3/1.png">
-<meta property="og:image" content="http://yoursite.com/2018/01/14/2018-01-14-texlive-Sublime-Text-3/2.png">
-<meta property="og:image" content="http://yoursite.com/2018/01/14/2018-01-14-texlive-Sublime-Text-3/3.png">
-<meta property="og:updated_time" content="2018-01-14T07:00:33.719Z">
+<meta property="og:description" content="主要流程1、打开mysql.exe(MySQL Command Line Client)，输入密码（windows就进入my.ini修改，然后用任务管理器重启服务） 2、输入：use mysql; 3、查询host输入： select user,host from user;">
+<meta property="og:updated_time" content="2018-01-14T07:15:04.481Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用sublime编写latex(texlive)">
-<meta name="twitter:description" content="一、下载地址 TeXLive下载地址：http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/Images/texlive.iso Sublime下载地址：http://sw.bos.baidu.com/sw-search-sp/software/6613504ddd3db/Sublime_Text_3.3126_Setup.exe">
-<meta name="twitter:image" content="http://yoursite.com/2018/01/14/2018-01-14-texlive-Sublime-Text-3/1.png">
+<meta name="twitter:title" content="Mysql设置允许外网访问（远程连接）">
+<meta name="twitter:description" content="主要流程1、打开mysql.exe(MySQL Command Line Client)，输入密码（windows就进入my.ini修改，然后用任务管理器重启服务） 2、输入：use mysql; 3、查询host输入： select user,host from user;">
   
     <link rel="alternative" href="/atom.xml" title="若上桑的博客" type="application/atom+xml">
   
@@ -158,19 +154,19 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-2018-01-14-texlive-Sublime-Text-3" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-2018-01-14-mysql-remote-connection" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      使用sublime编写latex(texlive)
+      Mysql设置允许外网访问（远程连接）
     </h1>
   
 
         
-        <a href="/2018/01/14/2018-01-14-texlive-Sublime-Text-3/" class="archive-article-date">
+        <a href="/2018/01/14/2018-01-14-mysql-remote-connection/" class="archive-article-date">
   	<time datetime="2018-01-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-14</time>
 </a>
         
@@ -178,27 +174,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、下载地址"><a href="#一、下载地址" class="headerlink" title="一、下载地址"></a>一、下载地址</h2><ul>
-<li>TeXLive下载地址：<br><a href="http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/Images/texlive.iso" target="_blank" rel="noopener">http://ftp.math.purdue.edu/mirrors/ctan.org/systems/texlive/Images/texlive.iso</a></li>
-<li>Sublime下载地址：<br><a href="http://sw.bos.baidu.com/sw-search-sp/software/6613504ddd3db/Sublime_Text_3.3126_Setup.exe" target="_blank" rel="noopener">http://sw.bos.baidu.com/sw-search-sp/software/6613504ddd3db/Sublime_Text_3.3126_Setup.exe</a></li>
-<li>Sumatra PDF下载地址：<br><a href="http://sw.bos.baidu.com/sw-search-sp/software/0ebcac412a851/SumatraPDF-3.1.2.0-64-install.exe" target="_blank" rel="noopener">http://sw.bos.baidu.com/sw-search-sp/software/0ebcac412a851/SumatraPDF-3.1.2.0-64-install.exe</a></li>
-</ul>
-<h2 id="二、主要流程"><a href="#二、主要流程" class="headerlink" title="二、主要流程"></a>二、主要流程</h2><ol>
-<li>先安装TeXLive（安装教程：<a href="http://jingyan.baidu.com/article/f0e83a2588f6d022e5910128.html）" target="_blank" rel="noopener">http://jingyan.baidu.com/article/f0e83a2588f6d022e5910128.html）</a></li>
-</ol>
-<a id="more"></a>
-<ol>
-<li>再安装sublime，再进入sublime根据下面教程安装LaTeXTools插件</li>
-<li>最后安装Sumatra PDF，记住安装路径</li>
-<li>然后根据下面的教程进入sublime里面配置一下</li>
-</ol>
-<h2 id="三、安装LaTeXTools"><a href="#三、安装LaTeXTools" class="headerlink" title="三、安装LaTeXTools"></a>三、安装LaTeXTools</h2><h3 id="1-安装Package-Control"><a href="#1-安装Package-Control" class="headerlink" title="1. 安装Package Control"></a>1. 安装Package Control</h3><pre><code>1)通过组合键 CTRL + `或是通过菜单命令View -&gt; Show Console来打开控制台，然后将下面的代码输入，按enter即可。（输入的代码网上查找）重启Sublime Text
-2)安装好了之后看以看到下面的选项：Preference-&gt;Package Control 
-</code></pre><p><img src="1.png" alt="logo1"><br>    3)输入latex，选择 LaTeXTools 进行安装即可</p>
-<h3 id="2-配置"><a href="#2-配置" class="headerlink" title="2.配置"></a>2.配置</h3><p>选择 Preferences -&gt; Browse Packages，选择并进入LaTeXTools 文件夹，使用 Sublime Text 3打开LaTeXTools.sublime-settings文件。<br><img src="2.png" alt="logo2"><br>修改其中的texpath和sumatra为你的安装路径，并修改distro为texlive。<br><img src="3.png" alt="logo3"><br>将builder改为simple。保存后退出即可。</p>
-<h2 id="四、配置SumatraPDF"><a href="#四、配置SumatraPDF" class="headerlink" title="四、配置SumatraPDF"></a>四、配置SumatraPDF</h2><p>1.修改环境变量PATH<br>将 SumatraPDF 的主程序目录添加到环境变量PATH，这一步很重要，否则下一步会无法进行。<br>右击我的电脑，选择属性，点击左侧的高级系统设置，再点击下方的环境变量。双击环境变量PATH，在后面加入输入SumatraPDF主目录确定即。<br><br>2.配置 SumatraPDF 反向搜索<br>打开命令提示符，执行以下命令：（将安装的sublime其中的安装路径替换成你实际的安装路径）<br><u>sumatrapdf.exe -inverse-search “\”D:\Sublime\Sublime Text 3\sublime_text.exe\” \”%f:%l\”</u></p>
-<h2 id="五、测试运行"><a href="#五、测试运行" class="headerlink" title="五、测试运行"></a>五、测试运行</h2><p>建立test.tex文件，复制以下内容：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">\documentclass&#123;article&#125; </span><br><span class="line">\author&#123;My Name&#125; </span><br><span class="line">\title&#123;The Title&#125; </span><br><span class="line">\begin&#123;<span class="built_in">document</span>&#125; </span><br><span class="line">\maketitle </span><br><span class="line">hello, world % This is comment </span><br><span class="line">\end&#123;<span class="built_in">document</span>&#125; </span><br><span class="line">\end&#123;<span class="built_in">document</span>&#125;</span><br></pre></td></tr></table></figure></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://blog.csdn.net/qazxswed807/article/details/51234834" target="_blank" rel="noopener">http://blog.csdn.net/qazxswed807/article/details/51234834</a></p>
+        <h2 id="主要流程"><a href="#主要流程" class="headerlink" title="主要流程"></a>主要流程</h2><p>1、打开mysql.exe(MySQL Command Line Client)，输入密码（windows就进入my.ini修改，然后用任务管理器重启服务）</p>
+<p>2、输入：use mysql;</p>
+<p>3、查询host输入： select user,host from user;<br><a id="more"></a><br>4、创建host（如果有”%”这个host值，则跳过这一步）</p>
+<p>如果没有”%”这个host值,就执行下面这两句:</p>
+<pre><code>mysql&gt; update user set host=&apos;%&apos; where user=&apos;root&apos;;
+mysql&gt; flush privileges;
+</code></pre><p>5、授权用户</p>
+<p>（1）任意主机以用户root和密码ictwsn连接到mysql服务器</p>
+<pre><code>mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;ictwsn&apos; WITH GRANT OPTION;
+mysql&gt; flush privileges;
+</code></pre><p>（2）指定IP为（如192.168.1.100）的主机以用户tuser和密码tpwd连接到mysql服务器</p>
+<pre><code>mysql&gt; GRANT ALL PRIVILEGES ON *.* TO &apos;tuser&apos;@&apos;192.168.1.100&apos; IDENTIFIED BY &apos;tpwd&apos; WITH GRANT OPTION; 
+mysql&gt; flush privileges;
+</code></pre><p>6、修改 mysql 的配置文件(针对ubuntu系统)：</p>
+<pre><code>sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+</code></pre><p>找到 “bind-address = 127.0.0.1” , 这一行要注释掉，只需在前面加个#。</p>
+<p><b>#bind-address = 127.0.0.1</b><br>或改为<br><br><b>bind-address = 0.0.0.0</b></p>
 
       
 
@@ -233,15 +225,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">texlive</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">sublime</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">latex</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">外网访问</a>
         		</li>
       		
 		</ul>
@@ -308,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/14/2018-01-14-texlive-Sublime-Text-3/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/14/2018-01-14-mysql-remote-connection/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -322,18 +310,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/01/14/2018-01-14-mysql-remote-connection/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Mysql设置允许外网访问（远程连接）
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">windows上安装tensorflow(gpu)</div>
+    <a href="/2018/01/14/2018-01-14-texlive-Sublime-Text-3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">使用sublime编写latex(texlive)</div>
       <i class="icon-circle-right"></i>
     </a>
   
