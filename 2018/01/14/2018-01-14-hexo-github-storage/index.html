@@ -6,14 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 外网访问 | 若上桑的博客</title>
+  <title>Hexo+Github搭建博客后的保存迁移 | 若上桑的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="若上桑的博客">
-<meta property="og:url" content="http://yoursite.com/tags/外网访问/index.html">
+  <meta name="description" content="搭建教程参考使用hexo+github搭建免费个人博客详细教程https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html按以上教程完成之后，需要保存迁移，以便在更换电脑时依然能够使用，可使用如下方法。 一、创建流程 在github上创建分支hexo，需要两个分支，一个master用以运行静态文件，一个hexo">
+<meta name="keywords" content="hexo,github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建博客后的保存迁移">
+<meta property="og:url" content="http://yoursite.com/2018/01/14/2018-01-14-hexo-github-storage/index.html">
 <meta property="og:site_name" content="若上桑的博客">
+<meta property="og:description" content="搭建教程参考使用hexo+github搭建免费个人博客详细教程https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html按以上教程完成之后，需要保存迁移，以便在更换电脑时依然能够使用，可使用如下方法。 一、创建流程 在github上创建分支hexo，需要两个分支，一个master用以运行静态文件，一个hexo">
+<meta property="og:updated_time" content="2018-01-14T09:13:48.412Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="若上桑的博客">
+<meta name="twitter:title" content="Hexo+Github搭建博客后的保存迁移">
+<meta name="twitter:description" content="搭建教程参考使用hexo+github搭建免费个人博客详细教程https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html按以上教程完成之后，需要保存迁移，以便在更换电脑时依然能够使用，可使用如下方法。 一、创建流程 在github上创建分支hexo，需要两个分支，一个master用以运行静态文件，一个hexo">
   
     <link rel="alternative" href="/atom.xml" title="若上桑的博客" type="application/atom+xml">
   
@@ -149,52 +154,97 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2018-01-14-hexo-github-storage" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/01/14/2018-01-14-mysql-remote-connection/" class="archive-article-date">
-  	<time datetime="2018-01-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-14</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/01/14/2018-01-14-mysql-remote-connection/">Mysql设置允许外网访问（远程连接）</a>
+    <h1 class="article-title" itemprop="name">
+      Hexo+Github搭建博客后的保存迁移
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/01/14/2018-01-14-hexo-github-storage/" class="archive-article-date">
+  	<time datetime="2018-01-13T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-01-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="搭建教程"><a href="#搭建教程" class="headerlink" title="搭建教程"></a>搭建教程</h2><p>参考使用hexo+github搭建免费个人博客详细教程<br><a href="https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html" target="_blank" rel="noopener">https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html</a><br>按以上教程完成之后，需要保存迁移，以便在更换电脑时依然能够使用，可使用如下方法。</p>
+<h2 id="一、创建流程"><a href="#一、创建流程" class="headerlink" title="一、创建流程"></a>一、创建流程</h2><ol>
+<li>在github上创建分支hexo，<font style="color:red">需要两个分支，一个master用以运行静态文件，一个hexo用以存放源码</font><a id="more"></a></li>
+<li>clone github上原有仓库到本地，只留下.git文件夹</li>
+<li>将原来的xxx.github.io所有内容放入刚拷贝的本地仓库中</li>
+<li>进入拷贝下的仓库主目录，进行操作并提交，最终达到master分支存在静态文件，hexo分支存放源码</li>
+<li>当需要在其它电脑上修改时，使用git拷贝到那台电脑本地，进入目录后通过git和hexo命令分别提交源码和生成的静态文件</li>
+</ol>
+<h2 id="二、主要步骤"><a href="#二、主要步骤" class="headerlink" title="二、主要步骤"></a>二、主要步骤</h2><ol>
+<li>在github上创建一个分支hexo，至此，就拥有了两个分支master和hexo</li>
+<li>使用<b>git clone git@github.com:Acheron2012/Acheron2012.github.io.git</b>拷贝到本地仓库</li>
+<li>进入刚拷贝的仓库目录，使用<b>git checkout hexo</b>命令切换到hexo分支（使用git branch查看当前所处分支）</li>
+<li>删除该目录下除.git文件夹外的所有文件</li>
+<li>再进入本地原先的git文件夹（即按《使用hexo+github搭建免费个人博客详细教程》创建的Acheron2012.github.io文件夹），ctrl+a全选所有内容并拷贝到第3步的仓库文件夹中</li>
+<li>进入刚拷贝完成的文件夹，打开.gitigonre文件，并删除里面所有内容（这一步是为保证提交源码到hexo分支做准备，若不删除，源码内容会提交不全）</li>
+<li>检查<i>_config.yml</i>文件，确定其中的deploy参数为master（保证hexo部署时只提交用以运行的静态页面，由默认的master分支运行静态文件，可在setting中设置运行分支）</li>
+<li>依次执行<b>git add .</b>、<b>git commit -m “…”</b>、<b>git push blog hexo</b>提交源码到hexo分支（若无blog项目，则先通过<b>git remote add blog git@github.com:Acheron2012/Acheron2012.github.io.git</b>添加项目）</li>
+<li>执行<b>hexo g</b>生成网站并用<b>hexo d</b>部署到GitHub上<br>如此，在GitHub上的<a href="https://github.com/Acheron2012/Acheron2012.github.io" target="_blank" rel="noopener">https://github.com/Acheron2012/Acheron2012.github.io</a> 仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</li>
+</ol>
+<h2 id="三、日常改动"><a href="#三、日常改动" class="headerlink" title="三、日常改动"></a>三、日常改动</h2><p>1.在其它电脑上想修改博客时，方法如下。</p>
+<ul>
+<li>安装git (<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a>)</li>
+<li>node.js (<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a>)</li>
+<li>hexo (使用npm install -g hexo)<br>2.使用<b>git clone git@github.com:Acheron2012/Acheron2012.github.io.git</b>拷贝到本地仓库<br>3.使用<b>git checkout hexo</b>命令切换到hexo分支（使用git branch查看当前所处分支）<br>4.在修改代码后，可通过依次执行<b>git add .</b>、<b>git commit -m “…”</b>、<b>git push blog hexo</b>提交源码到github上的hexo分支，并通过<b>hexo d</b>部署到github上的master分支（为保证突发情况，若死机或断电时提交顺序不会有问题，应先执行git操作，再执行hexo操作。</li>
+</ul>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762/answer/79109280</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">mysql</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">外网访问</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -207,17 +257,113 @@
 	</div>
 
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/01/14/2018-01-14-hexo-github-storage/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/01/14/2018-01-14-texlive-Sublime-Text-3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          使用sublime编写latex(texlive)
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2018/01/12/2018-01-12-windows上-tensorflow-gpu/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">windows上安装tensorflow(gpu)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -240,9 +386,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
