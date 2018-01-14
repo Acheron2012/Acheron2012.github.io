@@ -30,6 +30,25 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
 
+# SubNav
+subnav:
+  github: "https://github.com/Acheron2012"
+  #weibo: "#"
+  #rss: "#"
+  #zhihu: "#"
+  #qq: "#"
+  #weixin: "#"
+  #jianshu: "#"
+  #douban: "#"
+  #segmentfault: "#"
+  #bilibili: "#"
+  #acfun: "#"
+  #mail: "mailto:litten225@qq.com"
+  facebook: "https://www.facebook.com/profile.php?id=100006167627589"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
 # About/contact
 owner: 
   name: "若上桑" # 填写作者信息：名字
@@ -89,6 +108,30 @@ deploy:
   type: git
   repository: git@github.com:Acheron2012/Acheron2012.github.io.git
   branch: master
+  
+# 是否有快速回到顶部的按钮
+top: true
+
+#是否开启分享
+share_jia: true
+
+#1、多说
+duoshuo: true
+
+#2、网易云跟帖
+wangyiyun: true
+
+# slider的设置
+slider:
+  # 是否默认展开tags板块
+  showTags: true
+  
+# 文章太长，截断按钮文字
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
+# 数学公式
+mathjax: true
 
 jsonContent:
   meta: false
@@ -108,3 +151,5 @@ jsonContent:
     excerpt: false
     categories: false
     tags: true
+    
+aboutme: <br><br>就读于中国科学院计算技术研究所<br>邮箱：ruoranhuang@163.com
