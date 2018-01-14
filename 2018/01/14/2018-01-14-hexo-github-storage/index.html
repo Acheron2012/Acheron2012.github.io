@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/01/14/2018-01-14-hexo-github-storage/index.html">
 <meta property="og:site_name" content="若上桑的博客">
 <meta property="og:description" content="搭建教程参考使用hexo+github搭建免费个人博客详细教程https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html按以上教程完成之后，需要保存迁移，以便在更换电脑时依然能够使用，可使用如下方法。 一、创建流程 在github上创建分支hexo，需要两个分支，一个master用以运行静态文件，一个hexo">
-<meta property="og:updated_time" content="2018-01-14T09:13:48.412Z">
+<meta property="og:updated_time" content="2018-01-14T09:19:22.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github搭建博客后的保存迁移">
 <meta name="twitter:description" content="搭建教程参考使用hexo+github搭建免费个人博客详细教程https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html按以上教程完成之后，需要保存迁移，以便在更换电脑时依然能够使用，可使用如下方法。 一、创建流程 在github上创建分支hexo，需要两个分支，一个master用以运行静态文件，一个hexo">
@@ -197,9 +197,9 @@
 <ul>
 <li>安装git (<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a>)</li>
 <li>node.js (<a href="http://nodejs.cn/download/" target="_blank" rel="noopener">http://nodejs.cn/download/</a>)</li>
-<li>hexo (使用npm install -g hexo)<br>2.使用<b>git clone git@github.com:Acheron2012/Acheron2012.github.io.git</b>拷贝到本地仓库<br>3.使用<b>git checkout hexo</b>命令切换到hexo分支（使用git branch查看当前所处分支）<br>4.在修改代码后，可通过依次执行<b>git add .</b>、<b>git commit -m “…”</b>、<b>git push blog hexo</b>提交源码到github上的hexo分支，并通过<b>hexo d</b>部署到github上的master分支（为保证突发情况，若死机或断电时提交顺序不会有问题，应先执行git操作，再执行hexo操作。</li>
+<li>hexo (使用npm install -g hexo)<br>2.使用<b>git clone git@github.com:Acheron2012/Acheron2012.github.io.git</b>拷贝到本地仓库<br>3.使用<b>git checkout hexo</b>命令切换到hexo分支（使用git branch查看当前所处分支）<br>4.在修改代码后，先使用<b>hexo g</b>生成网站修改结果，并依次执行<b>git add .</b>、<b>git commit -m “…”</b>、<b>git push blog hexo</b>提交源码到github上的hexo分支，并通过<b>hexo d</b>部署到github上的master分支（为保证突发情况，若死机或断电时提交顺序不会有问题，应先执行git操作，再执行hexo操作。</li>
 </ul>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762/answer/79109280</a></p>
+<h2 id="注：git最后提交命令为git-push-blog-hexo，是hexo分支，不要弄错了"><a href="#注：git最后提交命令为git-push-blog-hexo，是hexo分支，不要弄错了" class="headerlink" title="注：git最后提交命令为git push blog hexo，是hexo分支，不要弄错了"></a>注：git最后提交命令为<font style="color:red">git push blog hexo</font>，是<b>hexo分支</b>，不要弄错了</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">https://www.zhihu.com/question/21193762/answer/79109280</a></p>
 
       
 
