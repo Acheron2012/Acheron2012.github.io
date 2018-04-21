@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/21/2018-04-21-Frp内网穿透配置(windows远程桌面) /index.html">
 <meta property="og:site_name" content="若上桑的博客">
 <meta property="og:description" content="1. Frp下载 Frp的下载地址 Frp的官方中文文档    这里下载的版本为：frp_0.16.1_windows_amd64（windows客户端，内网IP）frp_0.16.1_linux_amd64.tar.gz（linux服务端 公网IP） 2. Frp说明linux（服务端）版解压出来使用frps和frps.ini，为服务端的程序和配置文件。（s后缀代表server）windows（">
-<meta property="og:updated_time" content="2018-04-21T11:39:51.437Z">
+<meta property="og:updated_time" content="2018-04-21T11:48:35.809Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Frp内网穿透配置(windows远程桌面)">
 <meta name="twitter:description" content="1. Frp下载 Frp的下载地址 Frp的官方中文文档    这里下载的版本为：frp_0.16.1_windows_amd64（windows客户端，内网IP）frp_0.16.1_linux_amd64.tar.gz（linux服务端 公网IP） 2. Frp说明linux（服务端）版解压出来使用frps和frps.ini，为服务端的程序和配置文件。（s后缀代表server）windows（">
@@ -182,7 +182,12 @@
 </ul>
 <p>这里下载的版本为：frp_0.16.1_windows_amd64（windows客户端，内网IP）<br>frp_0.16.1_linux_amd64.tar.gz（linux服务端 公网IP）</p>
 <h4 id="2-Frp说明"><a href="#2-Frp说明" class="headerlink" title="2. Frp说明"></a>2. Frp说明</h4><p>linux（服务端）版解压出来使用<b>frps</b>和<b>frps.ini</b>，为服务端的程序和配置文件。（s后缀代表server）<br>windows（客户端）版本解压使用<b>frpc.exe</b>和<b>frpc.ini</b>，为客户端的程序和配置文件。（c后缀代表client）</p>
-<font color="gray"><em>外网机器系统linux（有公网IP），内网机器windows，其他系统配置上没有区别。</em></font><br><a id="more"></a><br><br>#### 3. 软件配置<br><br><strong>服务端frps.ini</strong><br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000 #客户端和服务端之间通信的端口</span><br><span class="line">vhost_http_port = 6081 #访问客户端web服务自定义的端口号</span><br></pre></td></tr></table></figure><br><br><font><strong>客户端frpc.ini</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[common] </span><br><span class="line">server_addr = 47.93.47.188 ##公网服务器ip</span><br><span class="line">server_port = 7000 #与服务端bind_port一致</span><br><span class="line"></span><br><span class="line">[RemoteDesktop]</span><br><span class="line">type = tcp #连接协议</span><br><span class="line">local_ip = 127.0.0.1 #内网服务器ip，可以是本地IP</span><br><span class="line">local_port = 3389 #内网机器远程桌面端口</span><br><span class="line">remote_port = 6000 #内网机器提供外网远程桌面链接的端口</span><br></pre></td></tr></table></figure><br><br><font color="gray" size="3"><em>即用户连接公网47.93.47.188:6000，相当于连接127.0.0.1:3389,即内网windows桌面</em></font> 
+<font color="gray"><em>外网机器系统linux（有公网IP），内网机器windows，其他系统配置上没有区别。</em></font>
+
+<a id="more"></a>
+<h4 id="3-软件配置"><a href="#3-软件配置" class="headerlink" title="3. 软件配置"></a>3. 软件配置</h4><p><strong>服务端frps.ini</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000 #客户端和服务端之间通信的端口</span><br><span class="line">vhost_http_port = 6081 #访问客户端web服务自定义的端口号</span><br></pre></td></tr></table></figure>
+<font><strong>客户端frpc.ini</strong></font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[common] </span><br><span class="line">server_addr = 47.93.47.188 ##公网服务器ip</span><br><span class="line">server_port = 7000 #与服务端bind_port一致</span><br><span class="line"></span><br><span class="line">[RemoteDesktop]</span><br><span class="line">type = tcp #连接协议</span><br><span class="line">local_ip = 127.0.0.1 #内网服务器ip，可以是本地IP</span><br><span class="line">local_port = 3389 #内网机器远程桌面端口</span><br><span class="line">remote_port = 6000 #内网机器提供外网远程桌面链接的端口</span><br></pre></td></tr></table></figure><br><br><font color="gray" size="3"><em>即用户连接公网47.93.47.188:6000，相当于连接127.0.0.1:3389,即内网windows桌面</em></font> 
 
 <h4 id="4-启动服务"><a href="#4-启动服务" class="headerlink" title="4. 启动服务"></a>4. 启动服务</h4><p>配置好后,服务端上传到外网服务器，客户端上传到家里的内网主机。采用命令行启动，格式为：程序 -c 配置文件。<br>命令：</p>
 <font face="黑体" color="red" size="3"><b>./frps -c ./frps.ini #服务端启动(linux)<b></b></b></font><br><font face="黑体" color="red" size="3"><b>frpc.exe -c frpc.ini #客户端启动(windows)<b></b></b></font> 
@@ -455,19 +460,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">外网访问</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">矢量图</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">PPT</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,11 +488,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color4">矢量图</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">外网访问</a>
+                <a href="javascript:void(0)" class="js-tag color4">PPT</a>
               </li>
              
               <li class="article-tag-list-item">
