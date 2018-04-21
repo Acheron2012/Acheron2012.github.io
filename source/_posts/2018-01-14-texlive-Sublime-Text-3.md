@@ -16,8 +16,7 @@ http://sw.bos.baidu.com/sw-search-sp/software/0ebcac412a851/SumatraPDF-3.1.2.0-6
 
 ## 二、主要流程
 
-1. 先安装TeXLive（安装教程：http://jingyan.baidu.com/article/f0e83a2588f6d022e5910128.html）
-<!-- more -->
+1. 先安装TeXLive（安装教程：http://jingyan.baidu.com/article/f0e83a2588f6d022e5910128.html）<!-- more -->
 2. 再安装sublime，再进入sublime根据下面教程安装LaTeXTools插件
 3. 最后安装Sumatra PDF，记住安装路径
 4. 然后根据下面的教程进入sublime里面配置一下

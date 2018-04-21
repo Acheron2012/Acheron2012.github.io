@@ -39,7 +39,7 @@ https://www.cnblogs.com/liuxianan/p/build-blog-website-by-hexo-github.html
 - hexo (使用npm install -g hexo)
 2.使用<b>git clone git@github.com:Acheron2012/Acheron2012.github.io.git</b>拷贝到本地仓库
 3.使用<b>git checkout hexo</b>命令切换到hexo分支（使用git branch查看当前所处分支）
-4.在修改代码后，先使用<b>hexo g</b>生成网站修改结果，并依次执行<b>git add .</b>、<b>git commit -m "..."</b>、<b>git push blog hexo</b>提交源码到github上的hexo分支，并通过<b>hexo d</b>部署到github上的master分支（为保证突发情况，若死机或断电时提交顺序不会有问题，应先执行git操作，再执行hexo操作。
+4.在修改代码后，先使用<b>hexo g</b>生成网站修改结果（本地启动为hexo s），并依次执行<b>git add .</b>、<b>git commit -m "..."</b>、<b>git push blog hexo</b>提交源码到github上的hexo分支，并通过<b>hexo d</b>部署到github上的master分支（为保证突发情况，若死机或断电时提交顺序不会有问题，应先执行git操作，再执行hexo操作。
 
 ## 注：git最后提交命令为<font style="color:red">git push blog hexo</font>，是<b>hexo分支</b>，不要弄错了
 
